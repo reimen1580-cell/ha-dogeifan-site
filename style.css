@@ -364,3 +364,103 @@ footer {
     }
 }
 
+/* --- 全体調整 --- */
+body {
+    line-height: 1.6;
+    overflow-x: hidden; /* 横揺れ防止 */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* --- HG紹介エリア --- */
+.hg-intro {
+    display: flex;
+    flex-wrap: wrap; /* スマホで縦並びにする設定 */
+    gap: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hg-image-container {
+    flex: 1 1 300px; /* 300pxを下回ると縦並びになる */
+    text-align: center;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hg-text-container {
+    flex: 2 1 300px;
+}
+
+.profile-title {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.highlight-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #003366;
+    margin: 20px 0;
+}
+
+.highlight-box h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+/* --- フッター・SNSリンクのスマホ最適化 --- */
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.artist-links {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* --- スマホ専用の微調整 --- */
+@media screen and (max-width: 600px) {
+    .profile-title {
+        font-size: 1.2rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        font-size: 0.85rem;
+    }
+
+    /* 検索ボックスを縦並びに */
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
