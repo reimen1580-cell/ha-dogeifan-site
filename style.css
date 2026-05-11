@@ -69,9 +69,22 @@ nav ul li a:hover {
     transition: color 0.3s;
 }
 
-.ho-mu {
-    color: rgb(9, 247, 9);
 
+
+.column-2 {
+    width: 48%;
+}
+
+.text {
+    line-height: 2;
+}
+
+.concept-img {
+    background-image: url(../img/gei.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 30px;
 }
 
 /* メインビジュアル */
